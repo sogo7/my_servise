@@ -16,3 +16,7 @@ ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
+
+RUN apt-get update -qq && apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+    && apt-get install -y nodejs
