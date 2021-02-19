@@ -1,5 +1,5 @@
 current directory: /Users/harasogo/Desktop/my_servise/vendor/bundle/gems/mysql2-0.5.3/ext/mysql2
-/Users/harasogo/.rbenv/versions/2.6.6/bin/ruby -I /Users/harasogo/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210217-13879-1dvhzpl.rb extconf.rb
+/Users/harasogo/.rbenv/versions/2.6.6/bin/ruby -I /Users/harasogo/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210219-39986-1b2ig53.rb extconf.rb
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes

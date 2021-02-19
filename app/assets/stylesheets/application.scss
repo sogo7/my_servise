@@ -5,6 +5,8 @@ body {
     display: flex;
     flex-flow: column;
     min-height: 100vh;
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    background-image: image-url('koruku.jpg');
 }
 
 
@@ -14,12 +16,20 @@ main, footer {
 
 
 main {
-    background-image: image-url('koruku.jpg');
     flex: 1;
-    color: aliceblue;
+    color: black;
+}
+
+.container {
+    background-image: image-url('photo.jpg');
+    padding-top: 10px;
+    margin-top: 10px;
 }
 
 
 footer {
-    height: 40px;
+    color: gray;
+    height: 60px;
+    // background-image: image-url('top.jpg');
+    padding: 15px;
 }
