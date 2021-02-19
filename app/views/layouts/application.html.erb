@@ -11,16 +11,10 @@
   </head>
 
   <body>
-  
-    <header>
-      <div class="d-flex flex-column flex-md-row align-items-center p-4 px-md-5 mb-6">
-        <h1 class="my-0 mr-md-auto font-weight-normal"><%= link_to "変顔大喜利", root_path, :style=>"color:white;" %></h1>
-        <a class="btn btn-outline-primary" href="/users/sign_in">ログイン</a>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>  
-      </div>
-    
-    </header>
+    <div class="d-flex flex-column flex-md-row align-items-center p-4 px-md-5 mb-4 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">変顔大喜利</h5>
+      <a class="btn btn-outline-primary" href="#">ログイン</a>
+    </div> 
     <%= yield %>
   </body>
 </html>
