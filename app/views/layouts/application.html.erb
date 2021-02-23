@@ -15,11 +15,14 @@
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center p-4 px-md-5 mb-6">
         <h1 class="my-0 mr-md-auto font-weight-normal"><%= link_to "変顔大喜利", root_path, :style=>"color:white;" %></h1>
-        <a class="btn btn-outline-primary" href="/users/sign_in">ログイン</a>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>  
+        <% if current_user %>
+          <a class="btn btn-outline-primary" href="/users/sign_out" data-method="delete">ログアウト</a>
+        <% else %>  
+          <a class="btn btn-outline-primary" href="/users/sign_in">ログイン</a>
+        <% end %>
       </div>
-    
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>  
     </header>
     <%= yield %>
   </body>

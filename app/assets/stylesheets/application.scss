@@ -9,6 +9,11 @@ body {
     background-image: image-url('koruku.jpg');
 }
 
+header > p {
+    text-align: center;
+    font-size: 20px;
+}
+
 
 main, footer {
     text-align: center;
@@ -24,12 +29,13 @@ main {
     background-image: image-url('photo.jpg');
     padding-top: 10px;
     margin-top: 10px;
+    text-align: center;
 }
+
 
 
 footer {
     color: gray;
     height: 60px;
-    // background-image: image-url('top.jpg');
     padding: 15px;
 }
