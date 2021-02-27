@@ -14,7 +14,13 @@
   
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center p-4 px-md-5 mb-6">
-        <h1 class="my-0 mr-md-auto font-weight-normal"><%= link_to "変顔大喜利", root_path, :style=>"color:white;" %></h1>
+        <h1 class="my-0 mr-md-auto font-weight-normal">
+          <% if current_user %>
+            <%= link_to "変顔大喜利", posts_path, :style=>"color:white;" %>
+          <% else %>
+            <%= link_to "変顔大喜利", root_path, :style=>"color:white;" %>
+          <% end %>
+        </h1>
         <% if current_user %>
           <a class="btn btn-outline-primary" href="/users/sign_out" data-method="delete">ログアウト</a>
         <% else %>  
@@ -25,5 +31,8 @@
       <p class="alert"><%= alert %></p>  
     </header>
     <%= yield %>
+    <footer>
+      <p>Copyright © 2021 omosiro corporation Inc. All Rights Reserved.</p>
+    </footer>
   </body>
 </html>
