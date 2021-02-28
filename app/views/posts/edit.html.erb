@@ -1,2 +1,13 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="container">    
+    <h3>変顔大喜利を編集</h3>
+    <%= form_for @post do |f| %>
+
+        <%= image_tag @post.img.to_s, size: "16x16"  %><br />
+
+        <%= f.label :大喜利をしよう！ %><br />
+        <%= f.text_field :ogiri, autocomplete: 'off' %>
+        
+        <%= f.submit :"変顔大喜利を投稿" %>
+
+    <% end %>
+</div>

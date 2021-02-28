@@ -1,2 +1,19 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="container">
+    <%= image_tag @post.img.to_s %><br /><br />
+    <h3>みんなも大喜利してみよう</h3>
+
+    <%= form_for [@post, @comment] do |f| %><br />
+        <%= f.text_area :ogiri, size: "40x2" %>
+        <%= f.submit '送信', class: "btn-sm btn-primary" %>
+    <% end %>
+
+    <%= @post.user.id %><br />
+    <%= @post.ogiri %>
+    <% if current_user.id == @post.user_id %>
+        <%= link_to "編集", edit_post_path(@post) %>
+    <% end %><br />
+    <% @comments.each do |comment| %>
+        <%= comment.ogiri %>
+    <% end %>
+    
+</div>
