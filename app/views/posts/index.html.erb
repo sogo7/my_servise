@@ -6,9 +6,14 @@
     <%= link_to "お気に入りの大喜利", "#" %><br />
 
     <% @posts.each do |post| %>
-        <%= image_tag post.img.to_s %><br />
+        <%= image_tag post.img.to_s, size: "400" %><br />
         <%= post.user.id %><br />
-        <%= post.ogiri %><br />
+        <%= link_to post.ogiri, post_path(post) %><br />
+
+        <% post.comments.each do |comment| %>
+            <%= comment.ogiri %><br />
+        <% end %>
     <% end %>
+    
 
 </div>
