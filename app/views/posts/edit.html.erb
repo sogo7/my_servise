@@ -2,7 +2,7 @@
     <h3>変顔大喜利を編集</h3>
     <%= form_for @post do |f| %>
 
-        <%= image_tag @post.img.to_s, size: "16x16"  %><br />
+        <%= image_tag @post.img.to_s, size: "400"  %><br />
 
         <%= f.label :大喜利をしよう！ %><br />
         <%= f.text_field :ogiri, autocomplete: 'off' %>

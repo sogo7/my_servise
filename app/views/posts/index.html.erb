@@ -1,16 +1,24 @@
 <div class="container">
-    <%= link_to "変顔大喜利をする", new_post_path %><br />
+    <%= render 'new' %>
     <%= link_to "自分の大喜利を見る", "#" %><br />
     <%= link_to "人気", "#" %><br />
     <%= link_to "新着", "#" %><br />
     <%= link_to "お気に入りの大喜利", "#" %><br />
 
     <% @posts.each do |post| %>
-        <%= image_tag post.img.to_s, size: "400" %><br />
+        <div class="post-image">
+            <%= link_to image_tag(post.img.to_s, size: "400"), post_path(post) %><br />
+        </div>
         <%= post.user.id %><br />
-        <%= link_to post.ogiri, post_path(post) %><br />
+        <div id="like-btn-<%= post.id %>">
+            <%= render "goods/good", post: post %>
+        </div>
+        <%= post.ogiri %><br />
 
         <% post.comments.each do |comment| %>
+            <div id="like-btn-<%= post.comment.id %>">
+                <%= render "goods/good", post: post %>
+            </div>
             <%= comment.ogiri %><br />
         <% end %>
     <% end %>

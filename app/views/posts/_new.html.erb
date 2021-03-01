@@ -1,11 +1,11 @@
 <div class="container">    
     <h3>自分で大喜利</h3>
-    <%= form_for @post do |f| %>
+    <%= form_with model: @post do |f| %>
 
-        <%= f.label :変顔を表示！ %><br />
+        <%= f.label :img, "変顔を表示！" %><br />
         <%= f.file_field :img %><br /> 
 
-        <%= f.label :大喜利をしよう！ %><br />
+        <%= f.label :ogiri, "大喜利をしよう！" %><br />
         <%= f.text_field :ogiri, autocomplete: 'off' %>
         
         <%= f.submit :"変顔大喜利を投稿" %>
