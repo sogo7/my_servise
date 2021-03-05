@@ -7,7 +7,7 @@
         <%= f.submit '送信', class: "btn-sm btn-primary" %>
     <% end %>
 
-    <%= @post.user.id %><br />
+    <%= @post.user.username %><br />
     <%= @post.ogiri %>
     <% if current_user.id == @post.user_id %>
         <%= link_to "編集", edit_post_path(@post) %>
