@@ -10,4 +10,5 @@ class Post < ApplicationRecord
   def good_by?(user)
     goods.where(user_id: user.id).exists?
   end
+  
 end

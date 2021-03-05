@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to request.referer
   end
-
+  
 
   private
 

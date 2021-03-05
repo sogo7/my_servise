@@ -1,0 +1,13 @@
+<% if comment.nice_by?(current_user) %>
+    <%= link_to(comment_add_path(comment), method: :delete, remote: true, id: :"like-button-#{comment.id}") do %>
+        <i class="fas fa-heart icon-btn liked">
+            <%= comment.nices.count %>
+        </i>
+    <% end %>
+<% else %>
+    <%= link_to(comment_add_path(comment), method: :post, remote: true, id: :"like-button-#{comment.id}") do %>
+        <i class="far fa-heart icon-btn not-like">
+            <%= comment.nices.count %>
+        </i>
+    <% end %>
+<% end %>

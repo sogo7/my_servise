@@ -10,6 +10,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :ユーザーネーム %><br />
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> 文字以上)</em>

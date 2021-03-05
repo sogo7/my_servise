@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :posts
   has_many :goods, dependent: :destroy
   has_many :good_posts, through: :goods, source: :post
+  has_many :nices, dependent: :destroy
+  has_many :nice_comments, through: :nices, source: :comment
 end

@@ -1,0 +1,3 @@
+<script>
+    ('#like-btn-<%= @comment.id %>').html("<%= escape_javascript(render partial: "nices/nice", locals: { post: @comment }) %>")
+</script>
