@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   belongs_to :user
   mount_uploader :img, ImgUploader
   has_many :comments, dependent: :destroy
-  has_many :goods
+  has_many :goods, dependent: :destroy
   has_many :users, through: :goods
 
   def good_by?(user)

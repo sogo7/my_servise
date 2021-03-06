@@ -4,10 +4,10 @@
     <% end %>
     <%= link_to "ユーザー情報設定はこちら", edit_user_registration_path %> 
     <%= render 'new' %>
-    <%= link_to "自分の大喜利を見る", "#" %><br />
-    <%= link_to "人気", "#" %><br />
-    <%= link_to "新着", "#" %><br />
-    <%= link_to "お気に入りの大喜利", "#" %><br />
+    <%= link_to "自分の大喜利を見る", my_ogiris_index_path %><br />
+    <%= link_to "人気", popular_ogiris_index_path %><br />
+    <%= link_to "新着", new_arrivals_index_path %><br />
+    <%= link_to "お気に入りの大喜利", my_goods_nices_index_path %><br />
 
     <% @posts.each do |post| %>
         <div class="post-image">
@@ -16,6 +16,11 @@
         <%= link_to post.user.username %><br />
         <div id="like-btn-<%= post.id %>">
             <%= post.ogiri %>
+            <% if current_user.id == post.user.id %>
+                <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか?"} do %>
+                    <i class="fas fa-times-circle"></i>
+                <% end %>
+            <% end %>
             <%= render "goods/good", post: post %>
         </div>
 
