@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'my_goods_nices/index'
+  get 'new_arrivals/index'
+  get 'popular_ogiris/index'
+  get 'my_ogiris/index'
   get 'comments/create'
   get 'comments/destroy'
   resources :posts
