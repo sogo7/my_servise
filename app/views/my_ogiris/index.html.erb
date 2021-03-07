@@ -1,2 +1,25 @@
-<h1>MyOgiris#index</h1>
-<p>Find me in app/views/my_ogiris/index.html.erb</p>
+<div class="container">   
+    <h3><%= "#{current_user.username}さんの大喜利" %></h3>
+    <% @posts.each do |post| %>
+            <div class="post-image">
+                <%= link_to image_tag(post.img.to_s, size: "400"), post_path(post) %><br />
+            </div>
+            <div id="like-btn-<%= post.id %>">
+                <%= post.ogiri %>
+                <% if current_user.id == post.user.id %>
+                    <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか?"} do %>
+                        <i class="fas fa-times-circle"></i>
+                    <% end %>
+                <% end %>
+                <%= render "goods/good", post: post %>
+            </div>
+
+            <%#=
+            <% post.comments.each do |comment| %>
+                <%#=<div id="like-btn-<%= post.id %><%#">
+                    <%##= render "nices/nice" %>
+                <%#</div>
+            <%#<% end %>
+
+    <% end %>
+</div>    
