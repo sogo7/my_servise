@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'comments/create'
   get 'comments/destroy'
   resources :posts
+  resources :users
   root  'tops#index'
   resources :posts, except: [:index] do
     resources :comments, only: [:create, :destroy]

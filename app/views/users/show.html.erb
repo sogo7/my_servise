@@ -1,10 +1,9 @@
 <div class="container">   
-    <h3><%= "お気に入りの大喜利" %></h3>
+    <h3><%= "#{@user.username}さんの大喜利" %></h3>
     <% @posts.each do |post| %>
             <div class="post-image">
                 <%= link_to image_tag(post.img.to_s, size: "400"), post_path(post) %><br />
             </div>
-            <%= link_to post.user.username, user_path(post.user) %><br />
             <div id="like-btn-<%= post.id %>">
                 <%= post.ogiri %>
                 <% if current_user.id == post.user.id %>
