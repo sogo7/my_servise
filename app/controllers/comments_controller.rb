@@ -4,6 +4,8 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
+      count = @post.popularcount + 3
+      @post.update(popularcount: count)
       redirect_to request.referer
     else
       @post_new = Book.new
@@ -16,6 +18,8 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
+    count = @post.popularcount - 3
+    @post.update(popularcount: count)
     redirect_to request.referer
   end
   

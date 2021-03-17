@@ -6,7 +6,7 @@
     <div class="hidden_box">
         <label for="label1">今すぐに変顔を撮影</label>
         <input type="checkbox" id="label1"/>
-        <div class="hidden_show">   
+        <div class="hidden_show">
             <%= render 'camera' %>
         </div>
     </div>
@@ -20,20 +20,22 @@
         <div class="post-image">
             <%= link_to image_tag(post.img.to_s, size: "400"), post_path(post) %><br />
         </div>
-        <%= link_to post.user.username, user_path(post.user) %><br />
-        <div id="like-btn-<%= post.id %>">
-            <%= post.ogiri %>
-            <% if current_user.id == post.user.id %>
-                <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか?"} do %>
-                    <i class="fas fa-times-circle"></i>
-                <% end %>
+        <%= link_to post.user.username, user_path(post.user) %>
+        <% if current_user.id == post.user.id %>
+            <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか?"} do %>
+                <i class="fas fa-times-circle"></i>
             <% end %>
+        <% end %>
+        <h5><%= post.ogiri %></h5>
+        
+        <div id="post-like-btn-<%= post.id %>">
             <%= render "goods/good", post: post %>
-        </div>
+        </div><br />
 
         <% post.comments.each do |comment| %>
-            <div id="like-btn-<%= post.id %>">
             <%= comment.ogiri %>
+            <small><%= comment.user.username %></small>
+            <div id="comment-like-btn-<%= comment.id %>">
                 <%= render "nices/nice", comment: comment %>
             </div>
         <% end %>

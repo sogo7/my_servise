@@ -5,7 +5,7 @@
                 <%= link_to image_tag(post.img.to_s, size: "400"), post_path(post) %><br />
             </div>
             <div id="like-btn-<%= post.id %>">
-                <%= post.ogiri %>
+                <h5><%= post.ogiri %></h5>
                 <% if current_user.id == post.user.id %>
                     <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか?"} do %>
                         <i class="fas fa-times-circle"></i>
@@ -14,12 +14,13 @@
                 <%= render "goods/good", post: post %>
             </div>
 
-            <%#=
             <% post.comments.each do |comment| %>
-                <%#=<div id="like-btn-<%= post.id %><%#">
-                    <%##= render "nices/nice" %>
-                <%#</div>
-            <%#<% end %>
+            <div id="like-btn-<%= post.id %>">
+                <%= comment.ogiri %>
+                <small><%= comment.user.username %></small>
+                <%= render "nices/nice", comment: comment %>
+            </div>
+            <% end %>
 
     <% end %>
 </div>    

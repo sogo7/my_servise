@@ -4,12 +4,12 @@ class NicesController < ApplicationController
 
   def create
     nice = Nice.new(user_id: current_user.id, comment_id: @comment.id)
-    redirect_to posts_path if nice.save
+    nice.save
   end
   
   def destroy
     nice = Nice.find_by(user_id: current_user.id, comment_id: @comment.id)
-    redirect_to posts_path if nice.delete
+    nice.delete
   end
 
   private

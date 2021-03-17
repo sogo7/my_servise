@@ -6,6 +6,7 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :goods, dependent: :destroy
   has_many :users, through: :goods
+  has_many :users, through: :nices
 
   def good_by?(user)
     goods.where(user_id: user.id).exists?
