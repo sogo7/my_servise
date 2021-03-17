@@ -1,3 +1,1 @@
-<script>
-    ('#like-btn-<%= @post.id %>').html("<%= escape_javascript(render partial: "goods/good", locals: { post: @post }) %>")
-</script>
+$('#post-like-btn-<%= @post.id %>').html("<%= escape_javascript(render partial: "goods/good", locals: { post: @post }) %>")

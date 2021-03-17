@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_002923) do
+ActiveRecord::Schema.define(version: 2021_03_17_001548) do
 
   create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "ogiri"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_002923) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "popularcount", default: 0
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

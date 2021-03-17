@@ -1,22 +1,23 @@
 class GoodsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_good
+  before_action :set_post
 
   def create
-    user = current_user
-    post = Post.find(params[:post_id])
-    good = Good.new(user_id: user.id, post_id: post.id)
-    redirect_to posts_path if good.save
+    good = Good.new(user_id: current_user.id, post_id: @post.id)
+    good.save
+    count = @post.popularcount + 1
+    @post.update(popularcount: count)
   end
+
   def destroy
-    user = current_user
-    post = Post.find(params[:post_id])
-    good = Good.find_by(user_id: user.id, post_id: post.id)
-    redirect_to posts_path if good.delete
+    good = Good.find_by(user_id: current_user.id, post_id: @post.id)
+    good.delete
+    count = @post.popularcount - 1
+    @post.update(popularcount: count)
   end
 
   private
-  def set_good
+  def set_post
     @post = Post.find(params[:post_id])
   end
 end

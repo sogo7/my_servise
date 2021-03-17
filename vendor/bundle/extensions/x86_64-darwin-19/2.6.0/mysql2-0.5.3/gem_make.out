@@ -1,5 +1,5 @@
 current directory: /Users/harasogo/Desktop/my_servise/vendor/bundle/gems/mysql2-0.5.3/ext/mysql2
-/Users/harasogo/.rbenv/versions/2.6.6/bin/ruby -I /Users/harasogo/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210219-39986-1b2ig53.rb extconf.rb
+/Users/harasogo/.rbenv/versions/2.6.6/bin/ruby -I /Users/harasogo/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210315-13028-b5s0j8.rb extconf.rb
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -26,7 +26,7 @@ checking for my_bool in mysql.h... no
 Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load
 -----
 -----
-Setting libpath to /usr/local/Cellar/mysql/8.0.23/lib
+Setting libpath to /usr/local/Cellar/mysql/8.0.23_1/lib
 -----
 creating Makefile
 

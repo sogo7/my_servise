@@ -8,12 +8,13 @@
     <% end %>
 
     <%= @post.user.username %><br />
-    <%= @post.ogiri %>
+    <h5><%= @post.ogiri %></h5>
     <% if current_user.id == @post.user_id %>
         <%= link_to "編集", edit_post_path(@post) %>
     <% end %><br />
     <% @comments.each do |comment| %>
         <%= comment.ogiri %>
+        <small><%= comment.user.username %></small><br />
     <% end %>
     
 </div>
