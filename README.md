@@ -28,15 +28,15 @@ https://hengao-ogiri.herokuapp.com/ <br >
 
 
 # Setup
-  このリポジトリをローカルに取り込む
-  git clone https://github.com/kazuya002ex/quasar.git
+  このリポジトリをローカルに取り込む</br>
+  git clone https://github.com/sogo7/my_servise
 
   dockerのセットアップ方法
 
-  コンテナをbuildする
+  コンテナをbuildする</br>
   docker-compose build
 
-  コンテナを起動
+  コンテナを起動</br>
   docker-compose up -d
 
   DBを作成する
