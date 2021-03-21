@@ -28,31 +28,31 @@ https://hengao-ogiri.herokuapp.com/ <br >
 
 
 # Setup
-  このリポジトリをローカルに取り込む</br>
-  git clone https://github.com/sogo7/my_servise
+-このリポジトリをローカルに取り込む</br>
+git clone https://github.com/sogo7/my_servise
 
-  dockerのセットアップ方法
+## dockerのセットアップ方法
 
-  コンテナをbuildする</br>
-  docker-compose build
+-コンテナをbuildする</br>
+docker-compose build
 
-  コンテナを起動</br>
-  docker-compose up -d
+-コンテナを起動</br>
+docker-compose up -d
 
-  DBを作成する
-  docker-compose run web rails db:create db:migrate
-  
-  DBに変更があった場合
-  現在のDBを削除し、DBを再構築する
-  docker-compose run web rails db:migrate:reset
+-DBを作成する
+docker-compose run web rails db:create db:migrate
 
-  開発データを投入する
-  docker-compose run web rails db:seed
+-DBに変更があった場合
+現在のDBを削除し、DBを再構築する</br>
+docker-compose run web rails db:migrate:reset
 
-  Gemfileの変更を取り込む
-  docker-compose build
+-開発データを投入する</br>
+docker-compose run web rails db:seed
 
- 
+-Gemfileの変更を取り込む
+docker-compose build
+
+
  
 
 
