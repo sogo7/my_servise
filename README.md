@@ -80,12 +80,9 @@ goods#destroy
 
 - users
 
-
-id	BIGINT
-
-username	VARCHAR
-
-email	VARCHAR
+| id |	BIGINT |
+| username |	VARCHAR |
+| email |	VARCHAR |
 
 encrypted_password	VARCHAR
 
