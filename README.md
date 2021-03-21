@@ -3,6 +3,6 @@
  
  <img src="![1のコピー](https://user-images.githubusercontent.com/76856353/111902697-0b9aad80-8a82-11eb-963c-4af6d291094d.png)", width=50%>
  
- <img src="https://user-images.githubusercontent.com/76856353/111902474-f4a78b80-8a80-11eb-8912-abcdb4011e01.png", width=50%>
+ <img src="![3のコピー](https://user-images.githubusercontent.com/76856353/111902736-2d943000-8a82-11eb-8f36-1520c33a2f8c.png)", width=50%>
 
 
