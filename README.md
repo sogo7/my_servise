@@ -10,7 +10,7 @@
 <img src="https://user-images.githubusercontent.com/76856353/111902697-0b9aad80-8a82-11eb-963c-4af6d291094d.png" alt="![1のコピー]" width="25%">
 
 # URL(変顔大喜利)
-hengao-ogiri.herokuapp.com/ <br >
+https://hengao-ogiri.herokuapp.com/ <br >
 
 # 使用技術
 - Ruby 2.6.6
