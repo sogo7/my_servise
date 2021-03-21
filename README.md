@@ -29,50 +29,33 @@ https://hengao-ogiri.herokuapp.com/ <br >
 #  APl
 
 
-## GET
-top#index (トップページ、root_path)
-
-devise/sessions#new (ログインページ)
-
-devise/users#new (新規登録ページ)
-
-posts#index (ログイン後、大喜利ページ)
-
-posts#show (詳細ページ)
-
-posts#edit (編集ページ)
-
-comments#edit (編集ページ) 
-
-my_ogiris#show (自分の大喜利ページ)
-
-popular_contents#show (人気の大喜利ページ)
-
-my_goods#show (自分の笑った大喜利ページ)
+| GET |
+| ---- |
+| top#index (トップページ、root_path) |
+| devise/sessions#new (ログインページ) |
+| devise/users#new (新規登録ページ) |
+| posts#index (ログイン後、大喜利ページ) |
+| posts#show (詳細ページ) |
+| posts#edit (編集ページ) |
+| comments#edit (編集ページ) |
+| my_ogiris#show (自分の大喜利ページ) |
+| popular_contents#show (人気の大喜利ページ) |
+| my_goods#show (自分の笑った大喜利ページ) |
 
 
-## POST
-sessions#create 
-
-sessions#destroy
-
-users#create
-
-users#update
-
-posts#create
-
-posts#update
-
-posts#destroy
-
-comments#create
-
-comments#destroy
-
-goods#create
-
-goods#destroy
+| POST |
+| ---- |
+| sessions#create |
+| sessions#destroy |
+| users#create |
+| users#update |
+| posts#create |
+| posts#update |
+| posts#destroy |
+| comments#create |
+| comments#destroy |
+| goods#create |
+| goods#destroy |
 
 
 ## DB
