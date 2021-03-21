@@ -163,7 +163,7 @@ updated_at	DATETIME
 
 
 # Setup
-'''
+```
 #このリポジトリをローカルに取り込む</br>
 git clone https://github.com/sogo7/my_servise
 
@@ -177,11 +177,11 @@ docker-compose up -d
 
 #DBを作成する
 docker-compose run web rails db:create db:migrate
-'''
+```
 
 - DBに変更があった場合
 
-'''
+```
 #現在のDBを削除し、DBを再構築する</br>
 docker-compose run web rails db:migrate:reset
 
@@ -190,7 +190,7 @@ docker-compose run web rails db:seed
 
 #Gemfileの変更を取り込む
 docker-compose build
-'''
+```
 
  
 
