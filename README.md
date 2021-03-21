@@ -42,7 +42,8 @@ docker-compose up -d
 -DBを作成する
 docker-compose run web rails db:create db:migrate
 
--DBに変更があった場合
+## DBに変更があった場合
+
 現在のDBを削除し、DBを再構築する</br>
 docker-compose run web rails db:migrate:reset
 
