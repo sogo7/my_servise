@@ -1,27 +1,28 @@
 <div class="container">   
     <h3><%= "新着の大喜利" %></h3>
     <% @posts.each do |post| %>
-            <div class="post-image">
-                <%= link_to image_tag(post.img.to_s, size: "400"), post_path(post) %><br />
-            </div>
-            <%= link_to post.user.username %><br />
-            <div id="like-btn-<%= post.id %>">
-                <h5><%= post.ogiri %></h5>
-                <% if current_user.id == post.user.id %>
-                    <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか?"} do %>
-                        <i class="fas fa-times-circle"></i>
-                    <% end %>
-                <% end %>
-                <%= render "goods/good", post: post %>
-            </div>
+        <div class="post-image">
+            <%= link_to image_tag(post.img.to_s, size: "400"), post_path(post) %><br />
+        </div>
+        <%= link_to post.user.username %><br />
+        <h5><%= post.ogiri %></h5>
+        <% if current_user.id == post.user.id %>
+            <%= link_to post_path(post), method: :delete, data: {confirm: "削除しますか?"} do %>
+                <i class="fas fa-times-circle"></i>
+            <% end %>
+        <% end %>
+        <div id="post-like-btn-<%= post.id %>">
+            <%= render "goods/good", post: post %>
+        </div>
 
-            <% post.comments.each do |comment| %>
-            <div id="like-btn-<%= post.id %>">
-                <%= comment.ogiri %>
-                <small><%= comment.user.username %></small>
+
+        <% post.comments.each do |comment| %>
+            <%= comment.ogiri %>
+            <small><%= comment.user.username %></small>
+            <div id="comment-like-btn-<%= comment.id %>">
                 <%= render "nices/nice", comment: comment %>
             </div>
-            <% end %>
+        <% end %>
 
     <% end %>
 </div>    
