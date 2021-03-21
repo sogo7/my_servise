@@ -80,82 +80,64 @@ goods#destroy
 
 - users
 
+
+| Field | Type |
+| ---- | ---- |
 | id |	BIGINT |
 | username |	VARCHAR |
 | email |	VARCHAR |
-
-encrypted_password	VARCHAR
-
-reset_password_token	VARCHAR
-
-reset_password_sent_at	DATETIME
-
-remember_created_at	DATETIME
-
-created_at	DATETIME
-
-updated_at	DATETIME
+|encrypted_password |	VARCHAR |
+| reset_password_token |	VARCHAR |
+| reset_password_sent_at |	DATETIME |
+| remember_created_at |	DATETIME |
+| created_at |	DATETIME |
+| updated_at |	DATETIME |
 
 
 - posts
 
-
-id	BIGINT
-
-ogiri	VARCHAR
-
-img	VARCHAR
-
-user_id	BIGINT
-
-created_at	DATETIME
-
-updated_at	DATETIME
-
-popularcount	bigint
+| Field | Type |
+| ---- | ---- |
+| id |	BIGINT |
+| ogiri |	VARCHAR |
+| img |	VARCHAR |
+| user_id |	BIGINT |
+| created_at |	DATETIME |
+| updated_at |	DATETIME |
+| popularcount |	bigint |
 
 
 - comments
 
-
-id	BIGINT
-
-ogiri	VARCHAR
-
-user_id	BIGINT
-
-post_id	BIGINT
-
-created_at	DATETIME
-
-updated_at	DATETIME
+| Field | Type |
+| ---- | ---- |
+| id |	BIGINT |
+| ogiri |	VARCHAR |
+| user_id |	BIGINT |
+| post_id |	BIGINT |
+| created_at |	DATETIME |
+| updated_at |	DATETIME |
 
 
 - goods
 
-
-id	BIGINT
-
-user_id	BIGINT
-
-post_id	BIGINT
-
-created_at	DATETIME
-
-updated_at	DATETIME
+| Field | Type |
+| ---- | ---- |
+|id |	BIGINT |
+| user_id |	BIGINT |
+| post_id | BIGINT |
+| created_at |	DATETIME |
+| updated_at |	DATETIME |
 
 - nices
 
-
-id	BIGINT
-
-user_id	BIGINT
-
-comment_id	BIGINT
-
-created_at	DATETIME
-
-updated_at	DATETIME
+| Field | Type |
+| ---- | ---- |
+| id |	BIGINT |
+| user_id |	BIGINT |
+| comment_id |	BIGINT |
+| created_at |	DATETIME |
+| updated_at |	DATETIME |
 
 
 
