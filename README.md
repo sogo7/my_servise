@@ -79,6 +79,8 @@ goods#destroy
 
 
 - users
+
+
 id	BIGINT
 
 username	VARCHAR
@@ -99,6 +101,8 @@ updated_at	DATETIME
 
 
 - posts
+
+
 id	BIGINT
 
 ogiri	VARCHAR
@@ -115,6 +119,8 @@ popularcount	bigint
 
 
 - comments
+
+
 id	BIGINT
 
 ogiri	VARCHAR
@@ -129,6 +135,8 @@ updated_at	DATETIME
 
 
 - goods
+
+
 id	BIGINT
 
 user_id	BIGINT
@@ -140,6 +148,8 @@ created_at	DATETIME
 updated_at	DATETIME
 
 - nices
+
+
 id	BIGINT
 
 user_id	BIGINT
