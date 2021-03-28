@@ -8,10 +8,6 @@
           <%= f.label :username, "ユーザー名" %>
           <%= f.text_field :username, autofocus: true, class: "form-control", placeholder: "最大10文字", maxlength: 10, autocomplete: 'off' %>
         </div>
-        <div class = 'form-group'>
-          <%= f.label :email, "メールアドレス" %>
-          <%= f.email_field :email, autocomplete: "off", class: "form-control", placeholder: "xxx@email.com" %>
-        </div>
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
