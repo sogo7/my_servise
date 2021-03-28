@@ -1,7 +1,7 @@
 <div class="container">    
     <h3>自分で大喜利</h3>
     <%= form_with model: @post do |f| %>
-
+        <%= render 'layouts/error_messages', model: f.object %>
         <%= f.label :img, "変顔を表示！" %><br />
         <%= f.file_field :img %><br /> 
 

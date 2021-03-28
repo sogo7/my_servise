@@ -1,4 +1,5 @@
 class Comment < ApplicationRecord
+  validates :ogiri, presence: true, length: { maximum: 50 }
   belongs_to :user
   belongs_to :post
   has_many :nices

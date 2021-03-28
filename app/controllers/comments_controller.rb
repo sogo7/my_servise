@@ -8,20 +8,21 @@ class CommentsController < ApplicationController
       @post.update(popularcount: count)
       redirect_to request.referer
     else
-      @post_new = Book.new
-      @comments = @post.comments
-      redirect_to new_post_path
+      flash[:alert] = '大喜利の投稿に失敗しました'
+      redirect_to request.referer
     end
   end
 
-  def destroy
-    @post = Post.find(params[:post_id])
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    count = @post.popularcount - 3
-    @post.update(popularcount: count)
-    redirect_to request.referer
-  end
+  #コメント機能には削除なしに今のところはしている
+  # def destroy
+  #   @post = Post.find(params[:post_id])
+  #   @comment = Comment.find(params[:id])
+  #   @comment.destroy
+  #   count = @post.popularcount - 3
+  #   @post.update(popularcount: count)
+  #flash[:alert] = '大喜利の投稿を削除しました'
+  #   redirect_to request.referer
+  # end
   
 
   private

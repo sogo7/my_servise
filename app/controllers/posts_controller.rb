@@ -21,6 +21,9 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     if @post.save
       redirect_to posts_path
+    else
+      flash[:alert] = '変顔大喜利の投稿に失敗しました'
+      redirect_to posts_path
     end
   end
 
@@ -36,7 +39,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    flash[:denger] = "削除が完了しました"
+    flash[:notice] = "削除が完了しました"
     redirect_to posts_path
   end
 
