@@ -1,8 +1,11 @@
 class Post < ApplicationRecord
-  validates :ogiri, presence: true
+  validates :ogiri, presence: true, length: { maximum: 50 }
   validates :img,   presence: true
-  belongs_to :user
+
   mount_uploader :img, ImgUploader
+
+  belongs_to :user
+  
   has_many :comments, dependent: :destroy
   has_many :goods,    dependent: :destroy
   has_many :users, through: :goods
