@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  validates :ogiri, presence: true, length: { maximum: 50 }
+  validates :ogiri, presence: true, length: { maximum: 55 }
   validates :img,   presence: true
 
   mount_uploader :img, ImgUploader
